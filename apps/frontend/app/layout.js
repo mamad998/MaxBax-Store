@@ -1,3 +1,4 @@
+export const dynamic = "force-dynamic";
 import ToggleAlert from "../components/effects/alert";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
