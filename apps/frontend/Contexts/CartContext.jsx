@@ -4,6 +4,21 @@ import { createContext, useEffect, useState } from "react";
 
 export const CartContext = createContext();
 
+export const useCart = () => {
+  const context = useContext(CartContext);
+
+  if (!context) {
+    return {
+      cart: [],
+      addToCart: () => {},
+      removeFromCart: () => {},
+      cartTotal: 0,
+    };
+  }
+
+  return context;
+};
+
 export default function CartProvider({ children }) {
   let [cart, setCart] = useState([]);
   const [alert, setAlert] = useState({
