@@ -34,7 +34,8 @@ export default function Edit() {
   });
 
   useEffect(() => {
-    const baseUrl = process.env.MAXBAX_API_URL_ADMIN || "http://localhost:3001";
+    const baseUrl =
+      process.env.NEXT_PUBLIC_MAXBAX_API_URL_ADMIN || "http://localhost:3001";
 
     async function fetchProduct() {
       try {
