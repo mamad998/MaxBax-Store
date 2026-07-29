@@ -1,5 +1,4 @@
 export const dynamic = "force-dynamic";
-export const revalidate = 0;
 
 import ToggleAlert from "../components/effects/alert";
 import Footer from "../components/Footer";
