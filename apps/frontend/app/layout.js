@@ -15,10 +15,10 @@ export default function RootLayout({ children }) {
       <body>
         <Providers>
           <Header />
-          {children}
-          <ToggleAlert />
-          <Footer />
         </Providers>
+        {children}
+        <ToggleAlert />
+        <Footer />
       </body>
     </html>
   );
