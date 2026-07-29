@@ -49,7 +49,8 @@ export default function ClientSide() {
     };
 
     try {
-      const baseUrl = process.env.MAXBAX_API_URL || "http://localhost:3000";
+      const baseUrl =
+        process.env.NEXT_PUBLIC_MAXBAX_API_URL || "http://localhost:3000";
       const apiBase = `${baseUrl}/api/orders`;
       const response = await fetch(apiBase, {
         method: "POST",
@@ -72,7 +73,7 @@ export default function ClientSide() {
         showAlert("خطا در ثبت سفارش ❌");
       }
     } catch (error) {
-      showAlert("مشکل از سمت سرور پیس آمده است ⚠️");
+      showAlert("مشکل از سمت سرور پیش آمده است ⚠️");
       console.log("error : ", error);
     }
   }
