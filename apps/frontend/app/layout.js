@@ -14,14 +14,14 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" dir="rtl">
       <body>
-        <CartProvider>
-          <Providers>
+        <Providers>
+          <CartProvider>
             <Header />
             {children}
-          </Providers>
-          <ToggleAlert />
-          <Footer />
-        </CartProvider>
+            <ToggleAlert />
+            <Footer />
+          </CartProvider>
+        </Providers>
       </body>
     </html>
   );
