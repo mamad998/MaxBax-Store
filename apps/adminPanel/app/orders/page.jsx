@@ -10,9 +10,9 @@ export default async function Orders() {
   const orders = await response.json();
 
   return (
-    <div className="m-7">
-      <div className="border-4 rounded-md">
-        <table className=" rounded-xl" dir="rtl">
+    <div className="m-7 overflow-x-hidden">
+      <div className="border-4 rounded-md ">
+        <table className=" rounded-xl " dir="rtl">
           <thead className="border-b-4">
             <tr className="text-center font-serif text-xl">
               <th className="border-e-4 p-3">نام کاربری</th>

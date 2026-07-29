@@ -17,7 +17,9 @@ function ToggleAlert() {
             ? alert.message
             : alert.message.includes("خطا")
               ? alert.message
-              : ` محصول ${alert.message} با موفقیت به سبد خرید اضافه شد ✅`}
+              : alert.message.includes("سرور")
+                ? alert.message
+                : ` محصول ${alert.message} با موفقیت به سبد خرید اضافه شد ✅`}
         </div>
 
         <button
