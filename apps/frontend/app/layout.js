@@ -3,6 +3,7 @@ import ToggleAlert from "../components/effects/alert";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Providers from "../components/Provider";
+import CartProvider from "../Contexts/CartContext";
 import "../styles/globals.css";
 export const metadata = {
   title: "MaxBax",
@@ -13,12 +14,14 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" dir="rtl">
       <body>
-        <Providers>
-          <Header />
-        </Providers>
-        {children}
-        <ToggleAlert />
-        <Footer />
+        <CartProvider>
+          <Providers>
+            <Header />
+            {children}
+          </Providers>
+          <ToggleAlert />
+          <Footer />
+        </CartProvider>
       </body>
     </html>
   );
