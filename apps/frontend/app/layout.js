@@ -1,6 +1,6 @@
 export const dynamic = "force-dynamic";
-export const fetchCache = "force-no-store";
 export const revalidate = 0;
+
 import ToggleAlert from "../components/effects/alert";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
@@ -17,12 +17,10 @@ export default function RootLayout({ children }) {
     <html lang="en" dir="rtl">
       <body>
         <Providers>
-          <CartProvider>
-            <Header />
-            {children}
-            <ToggleAlert />
-            <Footer />
-          </CartProvider>
+          <Header />
+          {children}
+          <ToggleAlert />
+          <Footer />
         </Providers>
       </body>
     </html>
